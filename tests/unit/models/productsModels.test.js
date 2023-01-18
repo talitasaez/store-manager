@@ -1,12 +1,12 @@
-const { chai } = require('chai');
+const chai = require('chai');
 const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 const productsModel = require('../../../src/models/productsModel');
 const connection = require('../../../src/models/connection');
 const productsMock = require('../mocks/productsMock.test');
 
-// const { expect } = chai;
-// chai.use(sinonChai);
+const { expect } = chai;
+chai.use(sinonChai);
 
 
 describe('Model de produtos', function () {
@@ -21,7 +21,7 @@ describe('Model de produtos', function () {
 
       const result = await productsModel.getAllProducts();
 
-      expect(result).to.be.a('array');
+      expect(result).to.be.equal(productsMock);
     });
 
     it('Deve retornar produto por id ', async function () {
