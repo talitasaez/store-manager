@@ -9,14 +9,14 @@ const { expect } = chai;
 chai.use(sinonChai); 
 
 
-describe('Service de produtos', function () {
-  describe('Listar todos os produtos', function () {
+describe('Service de produtos ', function () {
+  describe('Listar todos os produtos service', function () {
 
     // beforeEach(() => {
     //   sinon.stub(connection, 'execute').resolves([productsMock]);
     // });
 
-    it('Caso de sucesso, model retorna um array com elementos', async function () {
+    it('listar todos produtos', async function () {
       sinon.stub(productsModel, 'getAllProducts').resolves(productsMock);
 
       const result = await productsService.getAllProducts();

@@ -10,7 +10,7 @@ chai.use(sinonChai);
 
 
 describe('Model de produtos', function () {
-  describe('Listar todos os produtos', function () {
+  describe('Listar todos os produtos model ', function () {
 
     // beforeEach(() => {
     //   sinon.stub(connection, 'execute').resolves([productsMock]);

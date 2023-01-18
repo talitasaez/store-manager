@@ -11,7 +11,7 @@ chai.use(sinonChai);
 
 
 describe('Controller de produtos', function () {
-  describe('Listar todos os produtos', function () {
+  describe('Listar todos os produtos controller', function () {
 
     // const req = {}
     // const res = {}
