@@ -49,6 +49,22 @@ describe('Controller de produtos', function () {
     expect(res.status).to.have.been.calledWith(200);
       // expect(res.json).to.have.been.calledWith(productsMock[0]);
     });
+
+    it('testar função cadastrar', async function () {
+      const res = {}
+      const req = {}
+      res.status = sinon.stub().returns(res);
+      res.json = sinon.stub().returns();
+      req.params = { id: 1 };
+      sinon.stub(productsService, 'getProductsById')
+        .resolves({ type: 404, content: { message: 'Product not found' } });
+
+      await productsController.getProductsById(req, res);
+
+      expect(res.status).to.have.been.calledWith(404);
+      // expect(res.json).to.have.been.calledWithExactly({ message: 'Product not found' });
+    });
+
     afterEach(() => {
       sinon.restore();
     })

@@ -31,6 +31,14 @@ describe('Service de produtos ', function () {
 
       expect(result.message).to.be.deep.equal('Product not found');
     });
+
+    // it('Deve retornar produto por id ', async function () {
+    //   sinon.stub(productsModel, 'getProductsById').resolves([[productsMock[11]]]);
+
+    //   const result = await productsService.getProductsById(1);
+
+    //   expect(result.type).to.be.deep.equal();
+    // });
     afterEach(() => {
       sinon.restore();
     })
