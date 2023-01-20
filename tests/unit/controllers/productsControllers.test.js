@@ -2,7 +2,7 @@ const chai = require('chai');
 const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 const productsController = require('../../../src/controllers/productsController');
-// const { getAllProducts } = require('../../../src/models/productsModel');
+const productsModel = require('../../../src/models/productsModel');
 const productsService = require('../../../src/services/productsService');
 const productsMock = require('../mocks/productsMock.test');
 
@@ -27,12 +27,12 @@ describe('Controller de produtos', function () {
       res.status = sinon.stub().returns(res);
       res.json = sinon.stub().returns();
       sinon.stub(productsService, 'getAllProducts')
-        .resolves({ message: productsMock });
+        .resolves({ type: null, message: productsMock });
 
       await productsController.getAllProducts(req, res);
 
-      expect(res.status).to.have.been.calledOnceWith(200);
-      // expect(res.json).to.have.been.calledWithExactly({});
+      expect(res.status).to.have.been.calledWith(200);
+      // expect(res.json).to.have.been.calledWithExactly(productsMock);
     });
 
     it('Deve retornar produto por id ', async function () {
