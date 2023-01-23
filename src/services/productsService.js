@@ -41,7 +41,7 @@ const searchProduct = async (q) => {
   return { type: null, message: product };
 }
 
-const productSearch = product.find((e) => e.name.includes(q));
+const productSearch = product.filter((e) => e.name.includes(q));
  return { type: null, message: productSearch };
 };
 
