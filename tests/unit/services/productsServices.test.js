@@ -44,7 +44,23 @@ describe('Service de produtos ', function () {
   });
 
 
+});
+  
+describe('Testar função de DELETE', function () {
+  afterEach(function () {
+    sinon.restore();
   });
+  const newProduct = { name: 'Meteoro de Pégasus' };
+  const id = 4;
+  it('Retornar o type/status 404 se o id não existir ', async function () {
+    sinon.stub(productsModel, 'getProductsById').resolves(true);
+    sinon.stub(productsModel, 'deleteProduct').resolves(id);
+
+    const result = await productsService.deleteProduct(id);
+
+    expect(result).to.be.deep.equal(id);
+  });
+});
 
 afterEach(() => {
   sinon.restore();
