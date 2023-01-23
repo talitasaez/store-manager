@@ -31,6 +31,15 @@ describe('Model de produtos', function () {
 
       expect(result).to.be.deep.equal(productsMock[0]);
     });
+
+
+    // it('Cadastrando um produto', async function () {
+    //   sinon.stub(connection, 'execute').resolves([{ insertId: 10 }]);
+
+    //   const result = await productsModel.registerProduct(productName)
+
+    //   expect(result).to.equal(10);
+    // });
     afterEach(() => {
       sinon.restore();
    })
