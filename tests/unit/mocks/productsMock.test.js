@@ -12,3 +12,17 @@ const productsMock = [
     "name": "Escudo do Capitão América"
   }
 ];
+
+const productMockOne = {
+  id: 1,
+  name: 'Martelo de Thor',
+};
+
+const productMockNotFound = { message: 'Product not found' };
+
+module.exports = {
+  productsMock,
+  productMockOne,
+  productMockNotFound,
+
+};
