@@ -13,16 +13,16 @@ const productsMock = [
   }
 ];
 
-const productMockOne = {
-  id: 1,
-  name: 'Martelo de Thor',
-};
+// const productMockOne = {
+//   id: 1,
+//   name: 'Martelo de Thor',
+// };
 
-const productMockNotFound = { message: 'Product not found' };
+// const productMockNotFound = { message: 'Product not found' };
 
-module.exports = {
-  productsMock,
-  productMockOne,
-  productMockNotFound,
+// module.exports = {
+//   productsMock,
+//   productMockOne,
+//   productMockNotFound,
 
-};
+// };

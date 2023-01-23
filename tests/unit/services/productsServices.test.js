@@ -32,10 +32,20 @@ describe('Service de produtos ', function () {
       expect(result.message).to.be.deep.equal('Product not found');
     });
 
+  
+    it('Pegar Id existente, retornar o produto', async function () {
+      sinon.stub(productsModel, 'getProductsById').resolves(productsMock);
+      const id = 1;
+
+      const result = await productsService.getProductsById(id);
+
+      expect(result.data).to.be.deep.equal(productsMock)
+    });
   });
 
-  afterEach(() => {
-    sinon.restore();
-  })
 
+  });
+
+afterEach(() => {
+  sinon.restore();
 });
