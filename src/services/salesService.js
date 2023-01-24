@@ -2,7 +2,7 @@ const salesModel = require('../models/salesModel');
 
 const getAllSales = async () => {
   const sale = await salesModel.getAllSales();
-  return { type: null, message: sale };
+  return sale;
 };
 
 const getSalesById = async (id) => {

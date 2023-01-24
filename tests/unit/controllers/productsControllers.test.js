@@ -35,7 +35,7 @@ describe('Controller de produtos', function () {
       // expect(res.json).to.have.been.calledWithExactly(productsMock);
     });
 
-  
+
 
 
     afterEach(() => {
