@@ -23,23 +23,6 @@ describe('Service de sales', function () {
       expect(result).to.be.deep.equal(salesMock);
     });
 
-    // it('Deve retornar produto por id ', async function () {
-    //   sinon.stub(salesModel, 'getSalesById').resolves(undefined);
-
-    //   const result = await salesService.getSalesById(5);
-
-    //   expect(result.message).to.be.deep.equal('Sale not found');
-    // });
-
-
-    // it('Pegar Id existente, retornar o sales', async function () {
-    //   sinon.stub(salesModel, 'getSalesById').resolves(listSalesIdMock);
-
-    //   const result = await salesService.getSalesById(1);
-
-    //   expect(result.message).to.be.deep.equal(listSalesIdMock)
-    //   // expect(result.type).to.equal(null);
-    // });
   });
 
 
